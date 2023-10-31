@@ -5,7 +5,7 @@ server:
 
 spring:
   datasource:
-    url: jdbc:postgresql://digital-factory-pg-payments-service-postgresql_database-1:5432/paymentDb
+    url: jdbc:postgresql://digital-factory-pg-payments-service:5432/paymentDb
     username: pgAdmin
     password: AdminPG1234
  
