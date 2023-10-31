@@ -1,8 +1,0 @@
-
-h	java:S112œ"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8á“ùÄ´1
-h	java:S112´"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8â“ùÄ´1
-h	java:S112Å"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8â“ùÄ´1
-r
-java:S3655<"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(õùÏÿÿÿÿÿ8î“ùÄ´1
-t
-java:S62047"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(¼È ¬øÿÿÿÿ8ú“ùÄ´1
