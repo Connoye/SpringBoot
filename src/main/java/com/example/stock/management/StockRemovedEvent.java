@@ -1,11 +1,11 @@
-package com.example.stock.management;
+// package com.example.stock.management;
 
-import lombok.Builder;
-import lombok.Data;
+// import lombok.Builder;
+// import lombok.Data;
 
-@Builder
-@Data
-public class StockRemovedEvent implements StockEvent {
+// @Builder
+// @Data
+// public class StockRemovedEvent implements StockEvent {
 
-	private Stock stockDetails;
-}
+// 	private Stock stockDetails;
+// }
