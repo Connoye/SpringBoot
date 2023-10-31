@@ -3,27 +3,27 @@ server:
   error:
     include-message: always
 
-spring:
-  datasource:
-    url: jdbc:postgresql://localhost:5432/paymentDb
-    username: pgAdmin
-    password: AdminPG1234
+# spring:
+#   datasource:
+#     url: jdbc:postgresql://localhost:5432/paymentDb
+#     username: pgAdmin
+#     password: AdminPG1234
  
-  jpa:
-    database-platform: com.example.stock.management.AxonPostgreSQLDialect
-    generate-ddl: true
-    hibernate:
-      ddl-auto: update
-      connection:
-        provider_class: com.zaxxer.hikari.hibernate.HikariConnectionProvider
-    open-in-view: false
-    properties:
-      hibernate:
-        enable_lazy_load_no_trans: true
-        current_session_context_class: org.springframework.orm.hibernate5.SpringSessionContext
+#   jpa:
+#     database-platform: com.example.stock.management.AxonPostgreSQLDialect
+#     generate-ddl: true
+#     hibernate:
+#       ddl-auto: update
+#       connection:
+#         provider_class: com.zaxxer.hikari.hibernate.HikariConnectionProvider
+#     open-in-view: false
+#     properties:
+#       hibernate:
+#         enable_lazy_load_no_trans: true
+#         current_session_context_class: org.springframework.orm.hibernate5.SpringSessionContext
 
-        format_sql: true
-    show-sql: false
+#         format_sql: true
+#     show-sql: false
 
 springdoc:
   swagger-ui:
