@@ -1,12 +1,14 @@
 FROM openjdk:17-jdk-slim
-
+ENV JAVA_OPTS " -Xms512m -Xmx512m -Djava.security.egd=file:/deve/./urandom "
 
 EXPOSE 8080
 
-WORKDIR /usr/app
-COPY /artifacts/stockmanagement_eventstore-1.0.0.jar /usr/app/
+WORKDIR /app
+COPY /artifacts/stockmanagement_eventstore-1.0.0.jar /app/my-app.jar
 
 # COPY ./build/libs/my-app-1.0-SNAPSHOT.jar /usr/app/
 
 
-ENTRYPOINT ["java", "-jar", "stockmanagement_eventstore-1.0.0.jar"]
+#Passing a command line to run
+ENTRYPOINT ["java", "-jar", "my-app.jar"]
+
