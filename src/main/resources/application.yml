@@ -3,11 +3,11 @@ server:
   error:
     include-message: always
 
-# spring:
-#   datasource:
-#     url: jdbc:postgresql://localhost:5432/paymentDb
-#     username: pgAdmin
-#     password: AdminPG1234
+spring:
+  datasource:
+    url: jdbc:postgresql://digital-factory-pg-payments-service-postgresql_database-1:5432/paymentDb
+    username: pgAdmin
+    password: AdminPG1234
  
 #   jpa:
 #     database-platform: com.example.stock.management.AxonPostgreSQLDialect
