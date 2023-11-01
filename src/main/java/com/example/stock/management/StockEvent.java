@@ -1,4 +1,4 @@
-// package com.example.stock.management;
+ package com.example.stock.management;
 
-// public interface StockEvent {
-// }
+ public interface StockEvent {
+ }

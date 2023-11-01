@@ -1,16 +1,16 @@
-// package com.example.stock.management;
+ package com.example.stock.management;
 
-// import lombok.Data;
+ import lombok.Data;
 
-// @Data
-// public class Stock {
+ @Data
+ public class Stock {
 
-// 	private String name;
+ 	private String name;
 
-// 	private int quantity;
+ 	private int quantity;
 
-// 	private String user;
+ 	private String user;
 	
 	
 
-// }
+ }
