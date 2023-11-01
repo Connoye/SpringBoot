@@ -1,7 +1,7 @@
 FROM openjdk:17-jdk-slim
-ENV JAVA_OPTS " -Xms512m -Xmx512m -Djava.security.egd=file:/deve/./urandom "
+#ENV JAVA_OPTS " -Xms512m -Xmx512m -Djava.security.egd=file:/deve/./urandom "
 
-EXPOSE 8080
+EXPOSE 8086
 
 # WORKDIR /app
 WORKDIR /app
