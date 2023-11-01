@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.example</groupId>
-	<artifactId>stockmanagement_eventstore</artifactId>
+	<artifactId>stockmanagement-eventstore</artifactId>
 	<version>1.0.0</version>
-	<name>stockmanagement_eventstore</name>
+	<name>stockmanagement-eventstore</name>
 	<description>Demo project for Event Sourcing</description>
 	<properties>
 		<java.version>17</java.version>
