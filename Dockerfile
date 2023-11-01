@@ -5,7 +5,7 @@ EXPOSE 8080
 
 # WORKDIR /app
 WORKDIR /app
-COPY /artifact/stockmanagement-eventstore-1.0.0.jar /app/my-app.jar
+COPY /target/stockmanagement-eventstore-1.0.0.jar /app/my-app.jar
 
 
 # COPY ./build/libs/my-app-1.0-SNAPSHOT.jar /usr/app/

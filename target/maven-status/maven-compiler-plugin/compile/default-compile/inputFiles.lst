@@ -1,0 +1,16 @@
+/home/gorcon/Connoye/SpringBoot/src/main/java/com/example/stock/management/EventStore.java
+/home/gorcon/Connoye/SpringBoot/src/main/java/com/example/stock/management/StockController.java
+/home/gorcon/Connoye/SpringBoot/src/main/java/com/example/stock/management/PersonRepository.java
+/home/gorcon/Connoye/SpringBoot/src/main/java/com/example/stock/management/AxonPostgreSQLDialect.java
+/home/gorcon/Connoye/SpringBoot/src/main/java/com/example/stock/management/Stock.java
+/home/gorcon/Connoye/SpringBoot/src/main/java/com/example/stock/management/PersonAddEvent.java
+/home/gorcon/Connoye/SpringBoot/src/main/java/com/example/stock/management/StockmanagementEventstoreApplication.java
+/home/gorcon/Connoye/SpringBoot/src/main/java/com/example/stock/management/StockAddedEvent.java
+/home/gorcon/Connoye/SpringBoot/src/main/java/com/example/stock/management/StockRemovedEvent.java
+/home/gorcon/Connoye/SpringBoot/src/main/java/com/example/stock/management/PersonUpdateEvent.java
+/home/gorcon/Connoye/SpringBoot/src/main/java/com/example/stock/management/Person.java
+/home/gorcon/Connoye/SpringBoot/src/main/java/com/example/stock/management/PersonRemoveEvent.java
+/home/gorcon/Connoye/SpringBoot/src/main/java/com/example/stock/management/EventService.java
+/home/gorcon/Connoye/SpringBoot/src/main/java/com/example/stock/management/EventStoreDto.java
+/home/gorcon/Connoye/SpringBoot/src/main/java/com/example/stock/management/EventRepository.java
+/home/gorcon/Connoye/SpringBoot/src/main/java/com/example/stock/management/StockEvent.java
