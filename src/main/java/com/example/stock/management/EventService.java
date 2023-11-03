@@ -4,7 +4,6 @@
  import java.util.ArrayList;
  import java.util.List;
  import java.util.Optional;
- import java.util.stream.Collectors;
 
  import com.google.gson.Gson;
  import lombok.RequiredArgsConstructor;
@@ -52,15 +51,13 @@
  	}
 
  	public List<EventStore> fetchAllStockEvents(String name) {
- 		return repo.findByEntityId(name).stream().filter(stock->stock.getEventType().contains("STOCK")).collect(Collectors.toList());
+ 		return (repo.findByEntityId(name).stream().filter(stock->stock.getEventType().contains("STOCK"))).toList();
  	}
 
  	public Person fetchPerson(String id) {
- 		if(personRepo.existsById(id)){
- 			return personRepo.findById(id).get();
- 		}
- 		return null;
- 	}
+		 Optional<Person> person = personRepo.findById(id);
+        return person.orElse(null);
+    }
 
  	public List<EventStoreDto> fetchEventsByName(String name) {
  		Iterable<EventStore> events = repo.findByEntityId(name);
@@ -153,7 +150,7 @@
  				)
  			);
  		}catch (JsonProcessingException e) {
-             throw new RuntimeException(e);
+			throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR, e.getMessage());
          }
      }
 
@@ -177,7 +174,7 @@
  		}catch(RuntimeException ex){
  			throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Person record was not save due to system issues. Please try again later");
  		} catch (JsonProcessingException e) {
-             throw new RuntimeException(e);
+			throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR, e.getMessage());
          }
      }
 
@@ -194,7 +191,7 @@
  					)
  			);
  		}catch (JsonProcessingException e) {
- 			throw new RuntimeException(e);
+			throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR, e.getMessage());
  		}
  	}
  }
