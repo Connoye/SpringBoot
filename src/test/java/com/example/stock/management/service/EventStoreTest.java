@@ -26,6 +26,8 @@ class EventStoreTest {
     @Mock
     PersonRepository personRepo;
 
+    @Mock
+    EventRepository eventRepo;
     Person person;
 
     @BeforeEach
