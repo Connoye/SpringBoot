@@ -1,10 +1,16 @@
- package com.example.stock.management;
+ package com.example.stock.management.service;
 
  import java.time.LocalDateTime;
  import java.util.ArrayList;
  import java.util.List;
  import java.util.Optional;
 
+ import com.example.stock.management.event.*;
+ import com.example.stock.management.model.EventStore;
+ import com.example.stock.management.model.Person;
+ import com.example.stock.management.model.dto.EventStoreDto;
+ import com.example.stock.management.repository.EventRepository;
+ import com.example.stock.management.repository.PersonRepository;
  import com.google.gson.Gson;
  import lombok.RequiredArgsConstructor;
  import org.springframework.http.HttpStatus;

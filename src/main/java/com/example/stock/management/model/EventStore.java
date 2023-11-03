@@ -1,4 +1,4 @@
- package com.example.stock.management;
+ package com.example.stock.management.model;
 
  import java.time.LocalDateTime;
  import jakarta.persistence.Entity;

@@ -1,4 +1,4 @@
- package com.example.stock.management;
+ package com.example.stock.management.model.dto;
 
  import lombok.Data;
 
