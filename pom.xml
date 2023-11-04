@@ -15,9 +15,15 @@
     <description>Demo project for Event Sourcing</description>
     <properties>
         <java.version>17</java.version>
-        <sonar.coverage.jacoco.xmlReportPaths>
-            ../app-it/target/site/jacoco-aggregate/jacoco.xml
-        </sonar.coverage.jacoco.xmlReportPaths>
+        <jacoco.version>0.8.6</jacoco.version>
+        <sonar.maven.plugin>3.9.0.2155</sonar.maven.plugin>
+        <sonar.language>java</sonar.language>
+        <sonar.exclusions>**/pom.xml</sonar.exclusions>
+        <sonar.java.coveragePlugin>jacoco</sonar.java.coveragePlugin>
+        <sonar.scm.provider>git</sonar.scm.provider>
+        <sonar.log.level>TRACE</sonar.log.level>
+        <sonar.verbose>true</sonar.verbose>
+        <sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>
     </properties>
     <dependencies>
         <dependency>
@@ -67,7 +73,6 @@
             <optional>true</optional>
         </dependency>
     </dependencies>
-
     <build>
         <plugins>
             <plugin>
@@ -76,7 +81,6 @@
             </plugin>
         </plugins>
     </build>
-
     <profiles>
         <profile>
             <id>coverage</id>
