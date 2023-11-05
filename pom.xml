@@ -16,12 +16,12 @@
     <properties>
         <java.version>17</java.version>
         <jacoco.version>0.8.11</jacoco.version>
-        <junit.platform.surefire.provider.version>1.1.0</junit.platform.surefire.provider.version>
-        <junit.jupiter.version>5.7.0</junit.jupiter.version>
-        <junit.maven.surefire.plugin.version>2.22.1</junit.maven.surefire.plugin.version>
-        <sonar.coverage.jacoco.xmlReportPaths>
-            ../app-it/target/site/jacoco-aggregate/jacoco.xml
+        <sonar.projectKey>Connoye_SpringBoot</sonar.projectKey>
+        <sonar.organization>connoye-spring-01</sonar.organization>
+        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+        <sonar.coverage.jacoco.xmlReportPaths>${project.build.directory}/site/jacoco/jacoco.xml
         </sonar.coverage.jacoco.xmlReportPaths>
+
     </properties>
     <dependencies>
         <dependency>
@@ -83,29 +83,6 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>${junit.maven.surefire.plugin.version}</version>
-                <configuration>
-                    <includes>
-                        <include>**Test.java, **Should.java</include>
-                    </includes>
-                    <testFailureIgnore>false</testFailureIgnore>
-                </configuration>
-                <dependencies>
-                    <dependency>
-                        <groupId>org.junit.platform</groupId>
-                        <artifactId>junit-platform-surefire-provider</artifactId>
-                        <version>${junit.platform.surefire.provider.version}</version>
-                    </dependency>
-                    <dependency>
-                        <groupId>org.junit.jupiter</groupId>
-                        <artifactId>junit-jupiter-engine</artifactId>
-                        <version>${junit.jupiter.version}</version>
-                    </dependency>
-                </dependencies>
-            </plugin>
-            <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
                 <version>${jacoco.version}</version>
@@ -128,37 +105,4 @@
             </plugin>
         </plugins>
     </build>
-    <profiles>
-        <profile>
-            <id>coverage</id>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.jacoco</groupId>
-                        <artifactId>jacoco-maven-plugin</artifactId>
-                        <version>0.8.7</version>
-                        <executions>
-                            <execution>
-                                <id>prepare-agent</id>
-                                <goals>
-                                    <goal>prepare-agent</goal>
-                                </goals>
-                            </execution>
-                            <execution>
-                                <id>report</id>
-                                <goals>
-                                    <goal>report</goal>
-                                </goals>
-                                <configuration>
-                                    <formats>
-                                        <format>XML</format>
-                                    </formats>
-                                </configuration>
-                            </execution>
-                        </executions>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-    </profiles>
 </project>
