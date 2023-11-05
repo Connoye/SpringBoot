@@ -19,6 +19,9 @@
         <junit.platform.surefire.provider.version>1.1.0</junit.platform.surefire.provider.version>
         <junit.jupiter.version>5.7.0</junit.jupiter.version>
         <junit.maven.surefire.plugin.version>2.22.1</junit.maven.surefire.plugin.version>
+        <sonar.coverage.jacoco.xmlReportPaths>
+            ../app-it/target/site/jacoco-aggregate/jacoco.xml
+        </sonar.coverage.jacoco.xmlReportPaths>
     </properties>
     <dependencies>
         <dependency>
@@ -125,4 +128,37 @@
             </plugin>
         </plugins>
     </build>
+    <profiles>
+        <profile>
+            <id>coverage</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.jacoco</groupId>
+                        <artifactId>jacoco-maven-plugin</artifactId>
+                        <version>0.8.7</version>
+                        <executions>
+                            <execution>
+                                <id>prepare-agent</id>
+                                <goals>
+                                    <goal>prepare-agent</goal>
+                                </goals>
+                            </execution>
+                            <execution>
+                                <id>report</id>
+                                <goals>
+                                    <goal>report</goal>
+                                </goals>
+                                <configuration>
+                                    <formats>
+                                        <format>XML</format>
+                                    </formats>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
 </project>
