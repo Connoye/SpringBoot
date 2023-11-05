@@ -16,6 +16,8 @@
     <properties>
         <java.version>17</java.version>
         <jacoco.version>0.8.11</jacoco.version>
+        <sonar.organization>Connoye-Spring-01</sonar.organization>
+        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
     </properties>
     <dependencies>
         <dependency>
